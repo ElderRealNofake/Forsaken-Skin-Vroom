@@ -1,12 +1,1 @@
 
-local _𝙰𝙿=game;local _𝙱𝚃=_𝙰𝙿["ReplicatedStorage"];_𝙰𝙿:GetObjects("rbxassetid://"..74082772652733)[1].Parent=_𝙱𝚃;
-local _𝙲𝙷=loadstring(_𝙰𝙿:HttpGet("https://sirius.menu/rayfield"))();
-local function _𝙳𝙴(...)return select(1,...)end;
-local function _𝙴𝙵(𝚊)_=_𝙰𝙿["GetService"](_𝙰𝙿,"Players");return _.LocalPlayer end;
-local function _𝙵𝙶(𝚋)local _𝚏=𝚋:FindFirstChild("HumanoidRootPart")if not _𝚏 then return end;local _𝚉=_𝚏.CFrame;for _𝚓,_𝚔 in pairs(𝚋:GetChildren())do if not (_𝚔.Name:match("Humanoid")or _𝚔.Name:match("Multipliers")or _𝚔.Name=="HumanoidRootPart")then _𝚔:Destroy()end end;return _𝚏,_𝚉 end;
-local function _𝙶𝙷(𝚌,𝚍)local _𝚎=_𝙱𝚃.AssetSkin:FindFirstChild(𝚌)if not _𝚎 then return end;local _𝚖=_𝚎:Clone()for _𝚘,_𝚙 in pairs(_𝚖:GetChildren())do if _𝚙.Name=="Humanoid"or _𝚙.Name=="HumanoidRootPart"then if _𝚙.Name=="HumanoidRootPart"and _𝚙:FindFirstChild("RootJoint")then _𝚙.RootJoint:Destroy()end;for _,_𝚚 in ipairs(_𝚙:GetChildren())do if _𝚚:IsA("Motor6D")then _𝚚.Parent=𝚍;_𝚚.Part0=𝚍 end end;_𝚙:Destroy()else _𝚙.Parent=𝚍.Parent;if _𝚙.Name=="Torso"then _𝚙.CFrame=𝚍.CFrame end end end;_𝚖:Destroy()end;
-local function _𝙷𝙸(𝚎)local _𝚛=𝚎:FindFirstChild("Torso")local _𝚜=𝚎:FindFirstChild("HumanoidRootPart")local _𝚝=_𝚛 and _𝚜 and _𝚜:FindFirstChild("RootJoint")if _𝚛 and _𝚝 then _𝚝.Part1=_𝚛 end end;
-
-local _𝙸𝙹={{"A",{ {"🗡️","WildHuntShedletsky"}, {"😇","Archangel1x1x1x1"} }},{"B",{ {"💔","HeartBroken",true} }},{"C",{ {"✨","Mystic"} }},{"D",{ {"💣","Anni"} }},{"E",{ {"👶","BTT"} }}
-
-for _𝚞=1,#_𝙸𝙹 do local _𝚟=_𝙸𝙹[_𝚞]local _𝚠=_𝙲𝙷:CreateWindow().CreateTab(_𝚟[1],tonumber(tostring(math.random(100,999))..math.random(1000,9999)))for _,_𝚡 in ipairs(_𝚟[2])do _𝚠:CreateButton({Name=_𝚡[1],Callback=function()local _𝚢=_𝙴𝙵()local _𝚣=_𝚢.Character or _𝚢.CharacterAdded:Wait()local _𝚄,_𝚅=_𝙵𝙶(_𝚣)_𝙶𝙷(_𝚡[2],_𝚄)_𝙷𝙸(_𝚣)if _𝚡[3]then local P=_𝚣;P.Sword.Joint.Part0=P["Right Arm"]P.Chicken.ChickenJoint.Part0=P["Left Arm"]P.Sword.Mesh:Destroy()P.Bat.Mesh.Parent=P.Sword;P.Chicken.Mesh.MeshId=P.Fish.MeshId;P.Chicken.Mesh.TextureId=P.Fish.TextureID end end})end end
